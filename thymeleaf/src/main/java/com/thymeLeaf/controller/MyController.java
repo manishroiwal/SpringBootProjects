@@ -1,5 +1,7 @@
 package com.thymeLeaf.controller;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -55,6 +57,31 @@ public class MyController {
 		return "condition";
 	}
 	
+	// handler for including fragments
+	
+	@GetMapping("/service")
+	public String serviceHandler(Model m) {
+	
+		System.out.println("service handler");
+		m.addAttribute("title", "This is the Contact Page");
+		m.addAttribute("subtitle", LocalDateTime.now().toString());
+		return "service";
+	}
+	
+	//aboutNewHandler
+	@GetMapping("/newAbout")
+	public String newAbout(Model m) {
+		
+		return "aboutNew";
+		
+	}
+	
+	//contactHandler
+	@GetMapping("/contact")
+	public String contactHandler() {
+		
+		return "contact";
+	}
 	
 	
 	
