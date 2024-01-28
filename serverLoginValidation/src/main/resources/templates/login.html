@@ -84,19 +84,20 @@
 
 					<!-- check box -->
 					<div class="form-check">
-							<label class="form-check-label" for="flexCheckDefault"> Agreement </label>
+							
   							<input class="form-check-input" 
-  								th:classappend="${#fields.hasErrors('agreement') ? 'is-invalid':''}"
+  								
 								type="checkbox"
-								
 								name="agreement"
 								id="agreement" 
-								 required/>
+								th:classappend="${#fields.hasErrors('agreement') ? 'is-invalid':''}"
+								 />
 								
 								<div th:each="e : ${#fields.errors('agreement')}"
 								th:text="${e}"
 								class="invalid-feedback">
 								</div>
+								<label class="form-check-label" for="flexCheckDefault"> Agreement </label>
 						</div>
 
 
